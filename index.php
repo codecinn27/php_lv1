@@ -26,6 +26,39 @@ myTest();
 echo "<p>Variable x outside function is: $x</p>";
 ?>
 
+<?php
+  $x =0;
+  while($x <= 10){
+    echo "The number is: $x <br>";
+    $x++;
+  }
+?>
 
+<?php
+  echo "<br>";
+  for($x = 0; $x <= 10; $x++){
+    echo "The value is: $x <br>";
+  }
+?>
+
+</br>
+
+<?php
+// Associative Array
+  $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+  foreach($age as $key => $value){
+    echo "My name is:" . $key. " my age is: " . $value;
+    echo "<br>";
+  }
+
+?>
+
+</br>
+<?php
+  function helloG($first , $last){
+    echo "Hello $first $last";
+  }
+  helloG("John", "Doe");
+?>
 </body>
 </html>
