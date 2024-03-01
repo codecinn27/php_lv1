@@ -22,5 +22,22 @@
         email: <input type="text" name="email" />
         <input type="submit" name="submit" />
     </form>
+    <form action="get.php" method="GET">
+        <label for="course">Enter your favourite course name: </label>
+        <input type="text" name="course">
+        <a href="#" onclick="submitForm()">Direct to another page</a>
+    </form>
+
+    <script>
+    function submitForm() {
+        var course = document.querySelector('input[name="course"]').value;
+        var lang = 'php'; // You may want to define the language here or fetch it from somewhere
+
+        // Redirect to another page with the language and course parameters
+        window.location.href = "get.php?lang=" + lang + "&course=" + course;
+    }
+    </script>
+    
+    
 </body>
 </html>
