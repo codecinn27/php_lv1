@@ -24,6 +24,10 @@ DROP TABLE users;
 --- 7 insert data into the users table
 INSERT INTO users (id, username, email, password) VALUES(1, "user1", "user1@gmail.com","user123");
 
+INSERT INTO users (title, body, created_at) VALUES
+('Dummy Title 1', 'This is the body of the first dummy record.', NOW()),
+('Dummy Title 2', 'This is the body of the second dummy record.', NOW());
+
 --- 8 insert multiple data at once
 INSERT INTO users (id, username, email, password) 
 	VALUES(2, "user2", "user2@gmail.com","user123"),
@@ -44,6 +48,13 @@ CREATE TABLE blogs(
     body TEXT,
     
     PRIMARY KEY (id)
+);
+
+CREATE TABLE users(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(20),
+    body TEXT,
+    created_at TIMESTAMP
 );
 
 
