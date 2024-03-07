@@ -25,6 +25,13 @@
     both column names and numeric indexes. This can make your code less readable if 
     you're only interested in associative arrays. */
     $rows = $conn->query("SELECT title FROM users");
-    while($row = $rows->fetch(PDO::FETCH_ASSOC)){
+
+    //method 1
+    // while($row = $rows->fetch(PDO::FETCH_ASSOC)){
+    //     echo $row['title'] . "<br>";
+    // }
+
+    //method 2
+    foreach($rows as $row){
         echo $row['title'] . "<br>";
     }
