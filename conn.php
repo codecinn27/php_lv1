@@ -38,3 +38,11 @@
     foreach($row_body as $row){
         echo $row['body'] . "<br>";
     }
+
+    /*
+    PDO::FETCH_ASSOC: returns an array indexed by column name as returned in your result set
+    PDO::FETCH_BOTH (default): returns an array indexed by both column name and 0-indexed column number as returned in your result set
+    PDO::FETCH_OBJ: returns an anonymous object with property names that correspond to the column names returned in your result set
+    PDO::FETCH_LAZY: combines PDO::FETCH_BOTH and PDO::FETCH_OBJ, creating the object variable names as they are accessed
+    PDO::FETCH_NUM: returns an array indexed by column number as returned in your result set, starting at column 0
+    */
