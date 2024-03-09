@@ -27,10 +27,10 @@
     $rows = $conn->query("SELECT title FROM users");
     $row_body = $conn->query("SELECT body FROM users");
     //method 1
-    while($row = $rows->fetch(PDO::FETCH_LAZY)){
-        // echo $row['title'] . "<br>";
-        var_dump($row);
-    }
+    // while($row = $rows->fetch(PDO::FETCH_ASSOC)){
+    //     // echo $row['title'] . "<br>";
+    //     var_dump($row);
+    // }
 
     //method 2
     // foreach($rows as $row){
@@ -39,6 +39,8 @@
     // foreach($row_body as $row){
     //     echo $row['body'] . "<br>";
     // }
+
+
 
     /*
     PDO::FETCH_ASSOC: returns an array indexed by column name as returned in your result set
