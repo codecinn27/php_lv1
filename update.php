@@ -4,7 +4,7 @@
     $newTitle = "hello from post one";
     $id = 1;
 
-    //must used together with execute
+    //must used together with prepare update and execute
     $update = $conn->prepare("UPDATE users SET title = :title WHERE id = :id");
 
     $update->execute(array(
